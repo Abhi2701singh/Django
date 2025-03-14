@@ -7,6 +7,7 @@ def home(request):
         'title':'Home-Page',
         'bdata':'Welcome to Home Page',
         'c_list': ['PHP','Python','Java','C++'],
+        'number':[10,20,30,40,50,60,70,80,90],
         'student_details':[
             {'name':'Rahul','age':20},
             {'name':'Rohit','age':21},

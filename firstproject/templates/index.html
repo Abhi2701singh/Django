@@ -5,21 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
 </head>
-<style>
-    body{
-        background-color: #f1f1f1;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 20%;
-        font-size: 4rem;
-        background: linear-gradient(90deg, #f12711, #f5af19);
-    }
-</style>
+<link rel="stylesheet" href="/static/css/index.css">
 <body>
     {{bdata}}
+
+    <!-- list data  -->
+
     {% for n in c_list %}
     <div>{{n}}</div>
     {% endfor %}
-   
+    <br>
+   <table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+
+    <!-- dict data  -->
+
+    {% for d in student_details %}
+    <tr>
+        <td>{{d.name}}</td>
+        <td>{{d.age}}</td>
+    </tr>
+    {% endfor %}
+   </table>
+<!-- for loop -->
+<h1>using for loop</h1>
+ {% for n in number %}
+ 
+ <div>{{n}}</div>
+ {% endfor %}
+
+ <!-- if statement  -->
+<h1>using if statement </h1>
+ {% for n in number %}
+
+    {% if n > 20 %}
+        <div>{{n}}</div>
+    {% endif %}
+ {% endfor %}
+
+<!-- if-else statement  -->
+<h1>Using if-else statement</h1>
+{% for n in number %}
+    {% if n > 20 %}
+        <div>{{ n }}</div>
+    {% else %}
+        <div>no data</div>
+    {% endif %}
+{% endfor %}
+
+
 </body>
 </html>
